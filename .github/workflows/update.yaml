@@ -1,4 +1,4 @@
-name: import-gpg
+name: update repository
 
 on:
   push:
@@ -19,7 +19,7 @@ jobs:
       - name: Build Docker environment
         run: make build_docker
       - name: Build package
-        run: build_pkg
+        run: make build_pkg
       - name: Move packages to repository
         run: make copy
       - name: Build repository
