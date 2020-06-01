@@ -1,0 +1,30 @@
+name: import-gpg
+
+on:
+  push:
+    branches: master
+
+jobs:
+  import-gpg:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Import GPG key
+        id: import_gpg
+        uses: crazy-max/ghaction-import-gpg@v2
+        env:
+          GPG_PRIVATE_KEY: ${{ secrets.GPG_PRIVATE_KEY }}
+          PASSPHRASE: ${{ secrets.GPG_PASSPHRASE }}
+      - name: Build Docker environment
+        run: make build_docker
+      - name: Build package
+        run: build_pkg
+      - name: Move packages to repository
+        run: make copy
+      - name: Build repository
+        run: make build_repo
+        env:
+          GPG_KEYID: ${{ steps.import_gpg.outputs.keyid }}
+      - name: Test repository
+        run: make test

@@ -1,0 +1,11 @@
+#!/usr/bin/make -f
+clean:
+	rm -r opt
+
+build:
+	mkdir opt
+	echo 'x' > $(DESTDIR)/opt/file.txt
+
+binary:
+	mkdir $(DESTDIR)debian
+	mv opt $(DESTDIR)debian
