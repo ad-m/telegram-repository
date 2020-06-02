@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Telegram Debian repository</title>
+</head>
+<body>
+    <h1>Telegram Debian packages</h1>
+
+    <p>This is a Debian package repository of Terraform to automate installation and upgrade. To use this repository, first add the key to your system:</p>
+    
+    <code>wget -q -O - https://ad-m.github.io/telegram-repository/publickey.txt | sudo apt-key add -</code>
+    
+    <p>Then add the following entry in your <code>/etc/apt/sources.list.d/telegram.list</code>:</p>
+    
+    <code>deb https://ad-m.github.io/telegram-repository/ ./</code>
+    <p>You can use following command for that:</p>
+    <code>echo "deb https://ad-m.github.io/telegram-repository/ ./" >> /etc/apt/sources.list.d/telegram.list</code>
+    <p>Update your local package index, then finally install Terraform:</p>
+    <code>
+    sudo apt-get update<br>
+    sudo apt-get install telegram
+    </code>
+    <p>See <a href="https://desktop.telegram.org/">https://desktop.telegram.org/</a> for more information.</p> 
+</body>
+</html>
