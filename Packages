@@ -4,10 +4,10 @@ Version: 2.1.7
 Priority: optional
 Maintainer: @ad-m
 Filename: ./dist/telegram.deb
-Size: 1188
-MD5sum: b5e9177b86a0be4c22bd5d03b4abcf47
-SHA1: 94596a221f37ecc1086227e46138f0de03690c14
-SHA256: 783595e0377553e92587e20a0795c74926a93d722ed2cfe3617817e395587e36
-SHA512: efe7eef2a44fb63e415f75f1494251a5e2f7f94ace06062c396ab2bcf32bbb2faa3c7da4ab22be9e48acf751280750e2c494f6efa4bc85e73b6b050ec8d7233b
+Size: 1192
+MD5sum: b83f583e4cb43b17dfe9468a87aea175
+SHA1: 70182697893dd5f29c1bbb05b6f137d830549860
+SHA256: c914ced22844704aca23357c1616c9495dcbb53f91429a9c122976c22c71433e
+SHA512: a094101a81b6ea54a372005896f6569acac0d0de84b3cdd01491bfc264d5f0cbe52e47c55243d5dd3f792fbc1e73ad97b579f71d0e2c732bbc4e93f96e95626a
 Description: Fast and secure desktop app for a new era of messaging, perfectly synced with your mobile phone.
 
