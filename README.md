@@ -1,5 +1,7 @@
 # Telegram messenger for Debian
 
+![update repository](https://github.com/ad-m/telegram-repository/workflows/update%20repository/badge.svg)
+
 The repository contains information about creating package of Telegram messenger and provides the APT repository
 that delivery the current version of package. 
 
