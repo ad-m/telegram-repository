@@ -2,7 +2,6 @@ name: update repository
 
 on:
   push:
-    branches: master
   schedule:
   - cron: 0 0 * * 1 
 
@@ -31,11 +30,13 @@ jobs:
       - name: Test repository
         run: make test
       - name: Deploy
+        if: github.ref == 'refs/heads/master'
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./build/repo
       - uses: amondnet/vercel-action@v19
+        if: github.ref == 'refs/heads/master'
         with:
           vercel-token: ${{ secrets.VERCEL_TOKEN }}
           vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
