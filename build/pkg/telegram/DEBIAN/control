@@ -2,5 +2,5 @@ Package: telegram
 Architecture: all
 Maintainer: @ad-m
 Priority: optional
-Version: 2.1.7
+Version: 0.0.0
 Description: Fast and secure desktop app for a new era of messaging, perfectly synced with your mobile phone.

@@ -4,7 +4,6 @@ clean:
 
 build:
 	mkdir opt
-	echo 'x' > $(DESTDIR)/opt/file.txt
 
 binary:
 	mkdir $(DESTDIR)debian

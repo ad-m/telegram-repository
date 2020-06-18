@@ -5,6 +5,7 @@ build_docker:
 .PHONY: build_pkg
 build_pkg:
 	docker run -v $$PWD:/src --workdir /src/build/pkg apt-software ls -lah .;
+	docker run -v $$PWD:/src --workdir /src/build/pkg apt-software ./update.sh
 	docker run -v $$PWD:/src --workdir /src/build/pkg apt-software dpkg-deb --build telegram;
 
 .PHONY: copy
