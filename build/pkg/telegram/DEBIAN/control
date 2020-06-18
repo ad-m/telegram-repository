@@ -1,5 +1,5 @@
 Package: telegram
-Architecture: all
+Architecture: amd64
 Maintainer: @ad-m
 Priority: optional
 Version: 0.0.0
